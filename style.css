@@ -1,0 +1,465 @@
+/* =================================
+   RASYA'S STORYBOOK
+   DESIGN BY RASYA RAFI ARDIANSYAH
+================================= */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0d1020;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* WARNA UTAMA */
+:root {
+    --background: #0d1020;
+    --card: #191b32;
+    --purple: #b99aff;
+    --white: #ffffff;
+    --gray: #aaaabd;
+}
+
+/* NAVBAR */
+header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111428;
+    border-bottom: 1px solid #ffffff15;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--purple);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #dddded;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--purple);
+}
+
+/* HERO */
+.hero {
+    min-height: 570px;
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            #39275d,
+            #17182e 40%,
+            #0d1020 75%
+        );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitle {
+    color: var(--purple);
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 65px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span,
+.section-title h2 span,
+.about h2 span {
+    color: var(--purple);
+}
+
+.hero-content > p:not(.subtitle):not(.author) {
+    color: var(--gray);
+    max-width: 500px;
+    font-size: 15px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: var(--purple);
+    color: #171226;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.author {
+    margin-top: 30px;
+    color: #88889d;
+    font-size: 12px;
+}
+
+/* QUOTE */
+.quote {
+    padding: 40px 10%;
+    background: #19172c;
+    text-align: center;
+}
+
+.quote h2 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: #d9c8fa;
+    font-style: italic;
+}
+
+/* KOLEKSI CERPEN */
+.cerpen {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title > p:first-child {
+    color: var(--purple);
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.section-title h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.section-title > p:last-child {
+    color: var(--gray);
+}
+
+/* SEARCH */
+.search {
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.search input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #44405e;
+    border-radius: 5px;
+    background: #191b32;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.search input:focus {
+    border-color: var(--purple);
+}
+
+.search input::placeholder {
+    color: #88889d;
+}
+
+/* BOOK CONTAINER */
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.book-card {
+    background: var(--card);
+    border: 1px solid #ffffff12;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--purple);
+    box-shadow: 0 10px 30px #0005;
+}
+
+/* COVER BUKU */
+.book-cover {
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    background: linear-gradient(
+        135deg,
+        #5c447e,
+        #252344,
+        #17182e
+    );
+}
+
+/* INFO BUKU */
+.book-info {
+    padding: 25px;
+}
+
+.book-info small {
+    color: var(--purple);
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+
+.book-info h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.book-info p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.book-info button {
+    background: transparent;
+    border: none;
+    color: var(--purple);
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.book-info button:hover {
+    color: white;
+}
+
+/* PEMBACA CERPEN */
+.reader {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 45px;
+    background: var(--card);
+    border: 1px solid #51436e;
+    border-radius: 8px;
+}
+
+.reader h2 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    color: var(--purple);
+    margin: 25px 0;
+}
+
+.reader p {
+    white-space: pre-line;
+    color: #dddded;
+    line-height: 2;
+}
+
+.close {
+    background: #332b4c;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 30px;
+    color: var(--purple);
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+/* TENTANG PENULIS */
+.about {
+    padding: 90px 10%;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    background: #17182d;
+}
+
+.about-icon {
+    min-width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--purple);
+    border-radius: 50%;
+    font-size: 55px;
+}
+
+.about h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.about h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.about div:last-child p:last-child {
+    color: var(--gray);
+    font-size: 14px;
+    max-width: 650px;
+}
+
+/* FOOTER */
+footer {
+    padding: 45px 15px;
+    text-align: center;
+    background: #090b17;
+    border-top: 1px solid #ffffff15;
+}
+
+footer h3 {
+    color: var(--purple);
+    letter-spacing: 3px;
+}
+
+footer p {
+    color: #85859b;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE HP */
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-content > p:not(.subtitle):not(.author) {
+        font-size: 13px;
+    }
+
+    .quote h2 {
+        font-size: 17px;
+    }
+
+    .cerpen {
+        padding: 65px 6%;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .book-container {
+        grid-template-columns: 1fr;
+    }
+
+    .book-cover {
+        height: 170px;
+    }
+
+    .about {
+        padding: 65px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .about h2 {
+        font-size: 34px;
+    }
+
+    .reader {
+        margin: 25px 5%;
+        padding: 25px;
+    }
+
+    .reader h2 {
+        font-size: 28px;
+    }
+}
+
+/* ANIMASI */
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.book-card {
+    animation: muncul 0.8s ease;
+  }
+      
